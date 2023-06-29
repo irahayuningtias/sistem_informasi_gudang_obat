@@ -14,9 +14,10 @@ else {
 }
 $sql = " CREATE TABLE keluar (
     id_keluar INT PRIMARY KEY AUTO_INCREMENT,
-    tanggal VARCHAR(10),
-    penerima VARCHAR(50),
     id_barang VARCHAR(5),
+    tanggal VARCHAR(10),
+    jumlah INT,
+    penerima VARCHAR(50),
     FOREIGN KEY (id_barang) REFERENCES barang(id_barang)
     )";
 

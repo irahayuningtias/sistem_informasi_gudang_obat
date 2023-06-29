@@ -98,7 +98,7 @@
                                     <br>
                                     <input type="num" name="qty" placeholder="Quantity" class="form-control">
                                     <br>
-                                    <input type="text" name="penanggungjawab" placeholder="Penanggung Jawab" class="form-control">
+                                    <input type="text" name="keterangan" placeholder="Keterangan" class="form-control">
                                     <br>
                                     <button type="submit" class="btn btn-primary" name="barangmasuk">Submit</button>
                                     </div>
@@ -119,7 +119,7 @@
                                             <th>Tanggal</th>
                                             <th>Nama Barang</th>
                                             <th>Jumlah</th>
-                                            <th>Penanggung jawab</th>
+                                            <th>Keterangan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -127,19 +127,16 @@
                                     <?php
                                     $ambilsemuadataStock=mysqli_query($connect, "select * from masuk m, barang b where b.id_barang = m.id_barang");
                                     while($data=mysqli_fetch_array($ambilsemuadataStock)){
-                                        $idbarang = $data['id_barang'];
                                         $tanggal = $data['tanggal'];
                                         $namabarang = $data['nama_barang'];
-                                        $qty = $data ['qty'];
-                                        $penanggungjadwab = $data['penanggungjawab'];
+                                        $qty = $data ['jumlah'];
+                                        $keterangan = $data['keterangan'];
                                     ?>
-                                    
                                     <tr>
-                                    <td><?=$tanggal;?></td>
-                                    <td><?=$namabarang;?></td>
-                                    <td><?=$qty;?></td>
-                                    <td><?=$penanggungjadwab;?></td>
-                                    <td>
+                                        <td><?=$tanggal;?></td>
+                                        <td><?=$namabarang;?></td>
+                                        <td><?=$qty;?></td>
+                                        <td><?=$keterangan;?></td>
                                     </tr>
                                     <?php
                                     };

@@ -129,7 +129,7 @@
                                     while($data=mysqli_fetch_array($ambilsemuadataStock)){
                                         $tanggal = $data['tanggal'];
                                         $namabarang = $data['nama_barang'];
-                                        $qty = $data ['qty'];
+                                        $qty = $data ['jumlah'];
                                         $penerima = $data['penerima'];
                                     
                                     ?>

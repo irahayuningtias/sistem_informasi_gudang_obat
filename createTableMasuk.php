@@ -15,9 +15,10 @@ else {
 
 $sql = " CREATE TABLE masuk (
     id_masuk INT PRIMARY KEY AUTO_INCREMENT,
-    tanggal VARCHAR(10),
-    penanggungjawab VARCHAR(50),
     id_barang VARCHAR(5),
+    tanggal TIMESTAMP CURRENT_TIMESTAMP,
+    jumlah INT,
+    keterangan VARCHAR(100),
     FOREIGN KEY (id_barang) REFERENCES barang(id_barang)
     )";
 
